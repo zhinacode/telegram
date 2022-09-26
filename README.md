@@ -36,7 +36,7 @@ apt install dante-server
 ```
 tee <<EOF >/dev/null /etc/danted.conf
 internal: 0.0.0.0 port = 9090
-external: [network interface]
+external: [کارت شبکه در حال استفاده]
 
 clientmethod: none
 socksmethod: none
@@ -73,7 +73,7 @@ apt install dante-server
 ```
 tee <<EOF >/dev/null /etc/danted.conf
 internal: 0.0.0.0 port = 9090
-external: [network interface]
+external: [کارت شبکه در حال استفاده]
 
 clientmethod: none
 socksmethod: none
@@ -96,13 +96,13 @@ EOF
 
 ***توجه داشته باشید که باید بجای `[آیپی سرور خارجی]` باید آدرس آیپی سرور خارجی را قرار دهید!***
 
-***instead of [nework interface] you should put the network interface of the VPS. use command below to find out proper interface***
+***بجای کارت شبکه در حال استفاده باید نام مناسب آن را در ماشین در حال استفاده پیدا کرده و جایگزین کنید.با روش زیر می‌توانید اینکار را انجام دهید***
 
 ```
 ip a
 ```
 
-***output of this command will be something like below:***
+***خروجی دستور بالا چیزی مشابه زیر است:***
 
 ```
 root@your_host:~# ip a
@@ -119,7 +119,7 @@ root@your_host:~# ip a
 ```
 
 
-***proper network interface is eth0 in this scenario***
+***کارت شبکه در حال استفاده در بالا eth0***
 
 سرویس را اجرا کنید:
 
